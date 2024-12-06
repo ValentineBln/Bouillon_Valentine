@@ -1,0 +1,310 @@
+#rgpdPopupBlackOverlay {
+    display: block;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 900;
+}
+
+#rgpdPopupFormContainer {
+    padding: 20px;
+    border: 0;
+    clear: both;
+    width: 100%;
+    max-width: 640px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+#rgpdPopupForm {
+    padding: 30px;
+    background-color: #fff;
+    clear: both;
+    width: 100%;
+    line-height: 0;
+    font-size: 0;
+    border-radius: 3px;
+}
+
+#rgpdPopupForm input[type=checkbox] {
+    -webkit-appearance: checkbox;
+    -ms-appearance: checkbox;
+    appearance: checkbox;
+    -moz-appearance: checkbox;
+    -o-appearance: checkbox;
+    width: 20px;
+    height: 20px !important;
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+#rgpdPopupForm label {
+    display: block;
+    margin: 0;
+    padding: 0 0 0 30px;
+    float: none;
+    width: auto;
+    font-family: Arial, Geneva, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    height: auto;
+}
+
+#rgpdPopupFormButtons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#rgpdPopupFormButtons input[type=button] {
+    font-family: Arial, Geneva, sans-serif;
+    border: none;
+    color: #FFF;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: auto;
+    min-width: 100px;
+    transition: background 400ms ease-in-out;
+}
+
+#rgpdPopupFormCancel {
+    background-color: #CCC;
+}
+
+#rgpdPopupFormConfirm {
+    background-color: #75be30;
+}
+
+#rgpdPopupForm a {
+    border-bottom: 1px solid #888;
+    padding-bottom: 1px;
+}
+
+#rgpdPopupFormAcceptError {
+    padding: 6px 0 0 30px;
+    color: #d21e2c;
+    width: auto;
+    font-family: Arial, Geneva, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@media (min-width:1201px) {
+    #rgpdPopupFormCancel:hover {
+        background-color: #BBB;
+    }
+
+    #rgpdPopupFormConfirm:hover {
+        background-color: #75cf30;
+    }
+}
+
+@media (max-width:600px) {
+    #rgpdPopupForm {
+        padding: 30px 20px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,600,700&display=swap');
+
+.alertCookies {
+    width: 360px;
+    position: fixed;
+    bottom: 2.5vw;
+    left: 2.5vw;
+    padding: 40px;
+    background-color: #fff;
+    z-index: 999;
+    color: #222;
+    font: 400 13px/24px "Barlow";
+    letter-spacing: 0.6px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.alertCookies * {
+    box-sizing: border-box;
+}
+
+.alertCookies p {
+    margin: 0 0 20px 0;
+    color: #222;
+    display: inline-block;
+}
+
+.alertCookies p.alertCookiesTitle {
+    font: 700 30px/36px "Barlow";
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+}
+
+.alertCookies a {
+    position: relative;
+    color: #222;
+    cursor: pointer;
+    border-bottom: 1px solid #222;
+    padding-bottom: 1px;
+    text-decoration: none;
+}
+
+.alertCookies .rgpdAccept {
+    width: 100%;
+    height: 60px;
+    font: 500 16px/56px "Barlow";
+    letter-spacing: 0.6px;
+    background: linear-gradient(to top, #222 0%, #222 50%, #000 50%, #000 100%);
+    background-size: 100% 200%;
+    background-position: 0 100%;
+    color: #fff !important;
+    text-align: center;
+    margin: 6px 0 22px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 400ms ease-in-out;
+}
+
+.alertCookies .rgpdCustom {
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+}
+
+.alertCookiesContainer {
+    position: fixed;
+    background: rgba(24, 24, 24, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 998;
+    display: none;
+}
+
+.alertCookiesContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.gridCookies {
+    display: grid;
+    align-items: center;
+    min-height: 100%;
+    padding: 0 7.5vw;
+}
+
+.cookieSettings {
+    width: 100%;
+    max-width: 600px;
+    position: static;
+    margin: 5vw auto;
+    display: block;
+    padding: 50px;
+}
+
+.cookieSettings p.alertCookiesTitle {
+    font-size: 21px;
+    line-height: 30px;
+    margin: -5px 0 30px 0;
+}
+
+.cookieSettings .rgpdSaveSettings {
+    margin-bottom: 0;
+}
+
+.cookieSettings .rgpdCookieItem {
+    display: block;
+    clear: both;
+    margin: 0 0 5px 0;
+}
+
+.cookieSettings input[type=checkbox] {
+    -webkit-appearance: checkbox;
+    -ms-appearance: checkbox;
+    appearance: checkbox;
+    -moz-appearance: checkbox;
+    -o-appearance: checkbox;
+    width: 20px;
+    height: 20px !important;
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.cookieSettings label {
+    display: block;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 30px;
+    float: none;
+    width: auto;
+    height: auto;
+    pointer-events: inherit;
+    font: 700 16px/20px "Barlow";
+    letter-spacing: 0.4px;
+}
+
+@media (min-width:1201px) {
+    .alertCookies .rgpdAccept:hover {
+        background-position: 0 0;
+    }
+}
+
+@media (max-width:600px) {
+    .alertCookies {
+        padding: 7.5vw;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .alertCookies p.alertCookiesTitle {
+        font-size: 20px;
+        line-height: 26px;
+        margin: 5px 0 15px 0;
+        display: block;
+    }
+
+    .alertCookies p {
+        margin-bottom: 15px;
+    }
+
+    .alertCookies .rgpdAccept {
+        height: 50px;
+        font-size: 13px;
+        line-height: 46px;
+        margin: 10px 0 20px 0;
+        letter-spacing: 0.8px;
+    }
+
+    .cookieSettings {
+        border-radius: 5px;
+        margin: 10vw auto;
+    }
+
+    .cookieSettings p.alertCookiesTitle {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0 0 25px 0;
+    }
+
+    .cookieSettings .rgpdSaveSettings {
+        margin: 5px 0 0 0;
+    }
+}

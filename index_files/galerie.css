@@ -1,0 +1,18 @@
+/***** galerie *****/
+.galerie  							{ display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 20px; margin-top: 35px;}
+.galerie img 						{ display: block;}
+.galerie a 							{ display: block; position: relative;}
+.galerie a:before 					{ content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(images/loupe.svg) center no-repeat rgba(0,0,0,0.5); z-index: 15; opacity: 0;}
+
+@media (min-width:1201px) {
+.galerie a:hover:before				{ opacity: 1;}
+}
+@media (max-width:1000px) {
+.galerie  							{ margin-top: 30px;}
+}
+@media (max-width:1000px) {
+.galerie  							{ grid-template-columns: 1fr 1fr;}	
+}
+@media (max-width:600px) {
+.galerie  							{ grid-template-columns: 1fr; grid-gap: 10px; margin-top: 20px;}	
+}
